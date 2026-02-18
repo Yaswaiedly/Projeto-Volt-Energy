@@ -1,39 +1,76 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volt Energy | Sinta o Impacto</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <nav>
-        <div class="logo">VOLT<span style="color: var(--primary-color);">.</span></div>
+        <div class="logo">VOLT<span style="color: var(--primary-color)">.</span></div>
         <div class="nav-links">
             <a href="#">Sabores</a>
-            <a href="#">Performace</a>
+            <a href="#">Performance</a>
             <a href="#">FAQ</a>
         </div>
         <button class="btn-cta">PEDIR AGORA</button>
     </nav>
-    <main>
+
+    <main class="hero">
+        <!-- Conteúdo Textual -->
         <section class="hero-content">
             <header>
-                <span class="tagline">Edição Especial</span>
-                <h1 class="hero-title">PULSE<br/>DE ENERGIA</h1>
-                <p class="hero-description">Aumente sua frequência com a fórmula de absorção rápida. Desenvolvido para gamers e desenvolvedores.</p>
+                <span id="flavor-tag" class="tagline">Edição Original</span>
+                <h1 id="main-title" class="hero-title">PULSE<br>DE ENERGIA.</h1>
+                <p id="main-description" class="hero-description">
+                    Aumente sua frequência com a fórmula de absorção rápida. Desenvolvido para gamers e desenvolvedores de elite.
+                </p>
             </header>
 
-            <div class="flavour-selection">
-                <span class="flavour-label">Selecione o sabor:</span>
-                <div class="flavour-grid">
-                    <button data-flavour="lime" title="Lime" class="flavour-btn btn-lime active"></button>
-                    <button data-flavour="berry" title="Berry" class="flavour-btn btn-berry"></button>
-                    <button data-flavour="ice" title="Ice" class="flavour-btn btn-ice"></button>
+            <!-- Interação 1: Sabores -->
+            <div class="flavor-selection">
+                <span class="flavor-label">Selecione o sabor:</span>
+                <div class="flavor-grid">
+                    <button data-flavor="lime" class="flavor-btn btn-lime active" title="Lime"></button>
+                    <button data-flavor="berry" class="flavor-btn btn-berry" title="Berry"></button>
+                    <button data-flavor="ice" class="flavor-btn btn-ice" title="Ice"></button>
                 </div>
+            </div>
+
+            <!-- Interação 2: Barra de Energia -->
+            <div class="energy-widget">
+                <div class="energy-header">
+                    <p>Foco Estimulado</p>
+                    <span id="energy-value" style="color: var(--primary-color); font-weight: bold;">0%</span>
+                </div>
+                <div class="energy-bar-bg">
+                    <div id="energy-bar" class="energy-bar-fill"></div>
+                </div>
+                <button id="btn-charge" class="btn-charge">INJETAR CAFEÍNA</button>
+            </div>
+        </section>
+
+        <!-- Visual do Produto -->
+        <section class="product-display">
+            <div id="glow-effect"></div>
+            <div id="product-container" class="can-container">
+                <!-- SVG da Lata de Energético -->
+                <svg width="280" height="500" viewBox="0 0 280 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="40" y="20" width="200" height="460" rx="40" fill="#222"/>
+                    <rect x="40" y="20" width="200" height="80" rx="20" fill="#333"/>
+                    <text x="140" y="280" text-anchor="middle" fill="white" font-size="40" font-weight="900" transform="rotate(-90, 140, 280)">VOLT</text>
+                    <circle id="can-accent" cx="140" cy="400" r="30" fill="#ccff00"/>
+                </svg>
             </div>
         </section>
     </main>
+
+    <footer>
+        &copy; 2026 Projeto Volt Energy - Desenvolvido por <a href="http://">N@t@li@</a>
+    </footer>
+
 </body>
 </html>
 <script src="script.js"></script>
